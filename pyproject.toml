@@ -3,34 +3,48 @@ name = "gpt-sovits"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.11"
 dependencies = [
+    "cn2an>=0.5.23",
     "ctranslate2==4.4.0",
-    "fast-langdetect>=0.2.0",
-    "fastapi[standard]>=0.135.3",
+    "fast-langdetect==0.3.1",
+    "fastapi[standard]==0.125.0",
     "faster-whisper==1.0.3",
     "ffmpeg-python>=0.2.0",
     "funasr==1.0.27",
-    "gradio==3.50.2",
+    "gradio==3.44.4",
     "jieba>=0.42.1",
+    "jieba-fast>=0.53",
     "librosa==0.10.2",
     "modelscope>=1.35.4",
     "numba==0.58.1",
     "numpy==1.23.5",
     "onnxruntime==1.17.3",
     "opencc>=1.2.0",
+    "peft>=0.19.0",
     "psutil>=7.2.2",
+    "pyopenjtalk>=0.4.1",
     "pypinyin>=0.55.0",
+    "pytorch-lightning>=2.6.1",
     "pyyaml>=6.0.3",
     "scipy==1.10.1",
     "sentencepiece>=0.2.1",
     "soundfile>=0.13.1",
+    "split-lang>=2.1.0",
+    "tensorboard>=2.20.0",
     "torch==2.2.2+cu121",
     "torchaudio==2.2.2+cu121",
     "torchvision==0.17.2+cu121",
     "tqdm>=4.66.5",
     "transformers==4.45.2",
+    "x-transformers>=2.17.10",
 ]
 
 [[tool.uv.index]]
 url = "https://download.pytorch.org/whl/cu121"
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+override-dependencies = [
+    "jinja2==3.0.3",
+]
